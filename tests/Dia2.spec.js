@@ -6,24 +6,36 @@ import { test,expect} from "@playwright/test";
 //     await page.keyboard.press('Enter');
     
 // })
+// e-----------------------------------------jercicios 2 
+// test('Hacer clic en el boton Buscar', async ({ page }) => {
+//   await page.goto('https://www.google.com/');
 
-test('Hacer clic en el boton Buscar', async ({ page }) => {
-  await page.goto('https://www.google.com/');
+//   const buscador = page.getByRole('combobox', { name: 'Buscar' });
 
-  const buscador = page.getByRole('combobox', { name: 'Buscar' });
+//   // Escribir
+//   await buscador.fill('Dragon ball z');
 
-  // Escribir
-  await buscador.fill('Dragon ball z');
+//   // Validar input (ANTES del click)
+//   await expect(buscador).toHaveValue('Dragon ball z');
 
-  // Validar input (ANTES del click)
-  await expect(buscador).toHaveValue('Dragon ball z');
+//   // Buscar
+//   await page.getByRole('button', { name: 'Buscar con Google' }).click();
 
-  // Buscar
-  await page.getByRole('button', { name: 'Buscar con Google' }).click();
+//   // Validar navegación
+//   await expect(page).toHaveURL(/search/);
+// });
+// --------------------------------------------------Ejercicios 3 
+test('Buscar Playwright y validar resultados', async ({ page }) => {
+  // navegar a la pagina de google
+  await page.goto('https://example.com');
+  //Vlidar Titulo
+  await expect (page).toHaveTitle('Example Domain')
+  //Validar URL 
+  expect (page.url()).toContain('example.com')
+  
+})
 
-  // Validar navegación
-  await expect(page).toHaveURL(/search/);
-});
+
 
 // ------------------------------------------------------------------lo que se hizo en este ejercicios fue : 
 
