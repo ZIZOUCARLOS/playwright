@@ -25,7 +25,7 @@ import { test,expect} from "@playwright/test";
 //   await expect(page).toHaveURL(/search/);
 // });
 // --------------------------------------------------Ejercicios 3 
-test('Buscar Playwright y validar resultados', async ({ page }) => {
+test('Dia 2 de ejercicios', async ({ page }) => {
   // navegar a la pagina de google
   await page.goto('https://example.com');
   //Vlidar Titulo
