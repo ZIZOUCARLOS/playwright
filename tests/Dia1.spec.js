@@ -82,3 +82,11 @@ test('Validar URL de la pagina de Google', async ({ page }) => {
 // // page.reload() → recarga la página
 // // page.goBack() → ir atrás
 // // page.goForward() → ir adelantem
+
+
+
+test('Prueba de URL ', async ({ page }) => {
+        
+})
+
+

@@ -21,51 +21,49 @@ test('Validar multiples elementos',async({page}) =>{
     
 });
 
-// -----------------------------------Estudiar metodo de page para validar texto
+// // -----------------------------------Estudiar metodo de page para validar texto
 
-// toHaveText() → EXACTO
+// // toHaveText() → EXACTO
 
-// 👉 Se usa cuando quieres validar el texto tal cual
+// // 👉 Se usa cuando quieres validar el texto tal cual
 
-// await expect(page.locator('h1')).toHaveText('Example Domain');
+// // await expect(page.locator('h1')).toHaveText('Example Domain');
 
-// ✔ Debe coincidir EXACTAMENTE
-// ❌ Si cambia una palabra → falla
-_____________________________________________________________________--
-// toContainText() → PARCIAL (más usado 🔥)
+// // // ✔ Debe coincidir EXACTAMENTE
+// // // ❌ Si cambia una palabra → falla
 
-// 👉 Se usa cuando quieres validar parte del texto
+// // 👉 Se usa cuando quieres validar parte del texto
 
-// await expect(page.locator('body')).toContainText('Example');
+// // await expect(page.locator('body')).toContainText('Example');
 
-// ✔ Más flexible
-// ✔ Más usado en QA real
-_______________________________________________________________________
-// toContain() → STRING (NO locator)
+// // ✔ Más flexible
+// // ✔ Más usado en QA real
+// _______________________________________________________________________
+// // toContain() → STRING (NO locator)
 
-// 👉 Se usa así:
+// // 👉 Se usa así:
 
-// const texto = await page.textContent('body');
-// expect(texto).toContain('Example');
+// // const texto = await page.textContent('body');
+// // expect(texto).toContain('Example');
 
-// 👉 Aquí NO usas locator directamente, usas una variable
+// // 👉 Aquí NO usas locator directamente, usas una variable
 
 
-____________________________________________________________________________________________________
-// locator → cuando interactúas o validas elementos del DOM
-// NO locator → cuando trabajas con datos (strings, números, etc.)
-// CUÁNDO USAR locator (LO MÁS IMPORTANTE)
+// ____________________________________________________________________________________________________
+// // locator → cuando interactúas o validas elementos del DOM
+// // NO locator → cuando trabajas con datos (strings, números, etc.)
+// // CUÁNDO USAR locator (LO MÁS IMPORTANTE)
 
-// 👉 Cuando quieres trabajar con algo de la página:
+// // 👉 Cuando quieres trabajar con algo de la página:
 
-// Click
-// Escribir
-// Validar texto
-// Ver si existe
-// Contar elementos
+// // Click
+// // Escribir
+// // Validar texto
+// // Ver si existe
+// // Contar elementos
 
-// // Regla de ORO USAr locator SIEMPRE que puedas 🔥-------------------------------------------
-// Si estás viendo la página → locator
-// Si ya sacaste el dato → NO locator
+// // // Regla de ORO USAr locator SIEMPRE que puedas 🔥-------------------------------------------
+// // Si estás viendo la página → locator
+// // Si ya sacaste el dato → NO locator
 
 
