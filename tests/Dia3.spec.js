@@ -37,16 +37,31 @@
 // graba lo que haces
 // te genera código automáticamente
 
-import { test, expect } from "@playwright/test";
+// import { test, expect } from "@playwright/test";
 
 
-test('Ejercicios de practica nivel 3', async ({ page }) => {
-    await page.goto('https://example.com')
-    const link = page.locator('a');
+// test('Ejercicios de practica nivel 3', async ({ page }) => {
+//     await page.goto('https://example.com')
+//     const link = page.locator('a');
 
 
-    await expect(page.locator('a')).toHaveAttribute('href',"https://iana.org/domains/example") ;
-    await expect (link).toBeVisible('Learn more');
-    await link.click();
-    await expect(page.url()).toContain('https://www.iana.org/help/example-domains');
-});
+//     await expect(page.locator('a')).toHaveAttribute('href',"https://iana.org/domains/example") ;
+//     await expect (link).toBeVisible('Learn more');
+//     await link.click();
+//     await expect(page.url()).toContain('https://www.iana.org/help/example-domains');
+// });
+
+ import { test, expect } from "@playwright/test";
+
+ test('Ejercicios 4 para continuar ', async({page}) => {
+    await page.goto('https://example.com');
+
+    await expect(page).toHaveTitle('Example Domain');
+    await expect(page.locator('h1')).toContainText('Example Domain');
+    await expect(page.locator('p').first()).toContainText("This domain is for use in documentation examples without needing permission. Avoid use in operations.");
+    await expect(page.locator('a')).toHaveAttribute('href',"https://iana.org/domains/example" );
+    await expect(page.locator('a')).toHaveText('Learn more');
+
+
+
+ })
